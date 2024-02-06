@@ -71,6 +71,61 @@ let obj: Teacher = {
 }
 
 
+// * review 
+interface API<T> {
+    code: string | number
+    error: boolean
+    payload: {
+        content: T
+    }
+}
+
+
+interface ResponseUser {
+    name: string
+    email: string
+    password: string
+}
+
+
+//type StringOrNumber = ResponseUser['email'];
+
+interface ResponseAccess {
+    typeAccess: string
+    required: boolean
+}
+
+type UserApi = API<ResponseUser[]>
+//const userObj: UserApi = {}
+
+const arrobj: UserApi = 
+    {
+        code: 400,
+        error: true,
+        payload: {
+            content: [
+                {
+                email: "email@email.com",
+                name: "Hency Lara",
+                password: "mipassword"
+                },
+                {
+                    email: "correo@correo.com",
+                    name: "Starlin Brea",
+                    password: "claveSecreta"
+                }
+        ]
+        }
+    }
+
+// const userData = arrobj.payload.content.map(elm => {
+//     return elm.email
+// });
+
+// * enums
+
+
+
 function create (metodologia: Metodologia) {
     return metodologia
 }
