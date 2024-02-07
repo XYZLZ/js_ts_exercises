@@ -11,40 +11,16 @@ Deseo crear un boton reutilizable para mi pagina web. el cual necesita los sigui
 - dichos tamaños deben ser opcionales 
 - nombre del boton
 - typescript me debe indicar los atributos que requiere el boton.
-
+- el boton debe tener la opcion de saber si esta oculto o no.
+- el boton me debe pedir de forma obligatoria el nombre/titulo del boton y de forma opcional el size y oculto
 El componente debe ser importado en el archivo (app.tsx) 
 ### Pasos para realizar 
 - Crear el componente Button.
 - Creat una interfaz para el boton que contenga los atributos necesarios.
 - crear el boton en el componente.
 - crear un objeto con los diferentes tamaños del boton.
-- Configure the top-level `parserOptions` property like this:
-
-```tsx
-interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    variantsize?: 'sm' | 'md' | 'lg' | 'xl' | 'full'; 
-    title: string
-}
-const Buttom = ({variantsize, title, ...props}: Props) => {
-
-    const variantsSizes = {
-    sm: 'w-[8rem]',
-    md: 'w-[16rem]',
-    lg: 'w-[24rem]',
-    xl: 'w-[38rem]',
-    full: 'w-full',
-  };
-
-    return (
-        <>
-            <buttom className={`${variantsize && variantsSizes[variantsize]}`} {...props}>{title}</buttom>
-        </>
-    )
-}
-
-export default Buttom
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Retornar el componente
+- validar si existe los tamaños del boton para renderizar y si no retornar el tamaño medio.
+- colocar el resto de propiedades al componente.
+- los tamaños son 'sm' | 'md' | 'lg' | 'xl' | 'full'
+- renderizar el boton

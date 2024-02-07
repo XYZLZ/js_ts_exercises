@@ -41,6 +41,13 @@
   padding: 18 24;
 }
 
+.full {
+  font-size: x-large;
+  text-transform: capitalize;
+  margin: auto;
+  padding: 24 48;
+}
+
 .hidden {
   opacity: 0;
 }

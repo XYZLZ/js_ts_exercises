@@ -3,7 +3,6 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Input from './components/Input';
-
 function App() {
   const [count, setCount] = useState(0)
 
@@ -33,7 +32,7 @@ function App() {
       <Input hidden={true}
         placeholder='Write your name'
         id='name'
-        variantSize='xl'
+        variantSize='md'
       />
     </>
   )
