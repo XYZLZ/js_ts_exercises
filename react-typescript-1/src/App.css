@@ -11,9 +11,46 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
+
+.sm {
+  font-size: small;
+  text-transform: capitalize;
+  margin: auto;
+  padding: 4 8;
+}
+
+.md {
+  font-size: medium;
+  text-transform: capitalize;
+  margin: auto;
+  padding: 8 12;
+}
+
+.lg {
+  font-size: larger;
+  text-transform: capitalize;
+  margin: auto;
+  padding: 12 18;
+}
+
+.xl {
+  font-size: x-large;
+  text-transform: capitalize;
+  margin: auto;
+  padding: 18 24;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +59,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

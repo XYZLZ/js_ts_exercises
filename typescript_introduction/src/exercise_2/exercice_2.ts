@@ -16,25 +16,29 @@
 //  - El nivel de acceso debe ser dinamico independiente del usuario. 
 
 
-
-interface Persona {
+//Generic type
+interface Persona<T> {
     name: string;
     Lastname: string;
     age: number;
     isActive?: boolean;
+    access: T
 }
 
-interface Admin extends Persona {
+interface NivelDeAcceso {
+    type: string
+}
+interface Admin extends Persona<NivelDeAcceso> {
     department: string;
     nomina: number;
 }
 
-interface Maestro extends Persona {
+interface Maestro extends Persona<NivelDeAcceso> {
     asignatura: string;
     nomina: number;
 }
 
-interface Estudiante extends Persona {
+interface Estudiante extends Persona<NivelDeAcceso> {
     materia: string;
     nota: number
 }

@@ -7,7 +7,7 @@ let arr: Array<string> = [];
 // * Bucles
 
 // for (let index = 0; index < arr.length; index++) {
-  
+
 
 
 // }
@@ -20,8 +20,8 @@ let arr: Array<string> = [];
 // * la funcion me debe indicar que parametros nececito
 // * Me debe incicar cuando le estoy pasando un argumento erroneo
 
-function test(num1: number, num2: number, num3: number){
-    return num1+num2+num3;
+function test(num1: number, num2: number, num3: number) {
+    return num1 + num2 + num3;
 }
 
 const resultadoTest: number = test(5, 8, 24);
@@ -67,7 +67,7 @@ let obj: Teacher = {
     age: 12,
     Title: "Profesor de Programacion",
     nomina: "20,000",
-    metodologia: {tipo: 'asdasd'}
+    metodologia: { tipo: 'asdasd' }
 }
 
 
@@ -98,25 +98,25 @@ interface ResponseAccess {
 type UserApi = API<ResponseUser[]>
 //const userObj: UserApi = {}
 
-const arrobj: UserApi = 
-    {
-        code: 400,
-        error: true,
-        payload: {
-            content: [
-                {
+const arrobj: UserApi =
+{
+    code: 400,
+    error: true,
+    payload: {
+        content: [
+            {
                 email: "email@email.com",
                 name: "Hency Lara",
                 password: "mipassword"
-                },
-                {
-                    email: "correo@correo.com",
-                    name: "Starlin Brea",
-                    password: "claveSecreta"
-                }
+            },
+            {
+                email: "correo@correo.com",
+                name: "Starlin Brea",
+                password: "claveSecreta"
+            }
         ]
-        }
     }
+}
 
 // const userData = arrobj.payload.content.map(elm => {
 //     return elm.email
@@ -124,8 +124,18 @@ const arrobj: UserApi =
 
 // * enums
 
+enum Error_TYPES {
+    BAD_REQUEST,
+    SERVER_ERROR,
+    UNAUTHORIZED_USER
+}
+
+let error: Error_TYPES;
 
 
-function create (metodologia: Metodologia) {
+function create(metodologia: Metodologia, error: Error_TYPES) {
+    if (error === Error_TYPES.SERVER_ERROR) { }
     return metodologia
 }
+
+//create({ tipo: '' }, Error_TYPES.BAD_REQUEST);
