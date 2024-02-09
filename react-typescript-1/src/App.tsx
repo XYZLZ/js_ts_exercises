@@ -1,10 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Input from './components/Input';
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import Input from "./components/Input";
+import Button from "./components/Button";
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -29,13 +30,16 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
 
-      <Input hidden={true}
-        placeholder='Write your name'
-        id='name'
-        variantSize='md'
+      <Input
+        hidden={true}
+        placeholder="Write your name"
+        id="name"
+        variantSize="md"
       />
+
+      <Button id="MiBoton" nombre="Mi Boton" hidden={false} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
