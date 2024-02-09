@@ -52,6 +52,15 @@
   opacity: 0;
 }
 
+.box_react {
+  min-width: 500px;
+  height: 800px;
+  margin: auto;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border: 2px solid black;
+}
+
 
 
 .logo:hover {

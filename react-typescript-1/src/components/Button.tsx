@@ -14,6 +14,7 @@ const Button = ({ nombre, size, hidden, ...props }: IButton) => {
     xl: "xl",
     full: "full",
   };
+  
   return (
     <button
       className={`${size ? sizes[size] : sizes["md"]} ${hidden && "hidden"}`}

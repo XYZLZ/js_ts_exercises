@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Input from "./components/Input";
 import Button from "./components/Button";
+import Box from './components/Box'
 function App() {
   const [count, setCount] = useState(0);
 
@@ -37,7 +38,16 @@ function App() {
         variantSize="md"
       />
 
-      <Button id="MiBoton" nombre="Mi Boton" hidden={false} />
+      
+      <Box>
+        <Button id="MiBoton"
+        size="full"
+        nombre="My buttom"
+        hidden={false} />
+        <div>
+          asdkajshkajshd
+        </div>
+      </Box>
     </>
   );
 }
