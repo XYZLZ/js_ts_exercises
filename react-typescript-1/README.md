@@ -24,3 +24,10 @@ El componente debe ser importado en el archivo (app.tsx)
 - colocar el resto de propiedades al componente.
 - los tamaños son 'sm' | 'md' | 'lg' | 'xl' | 'full'
 - renderizar el boton
+
+## Segundo ejercicio.
+Deseo automatizar un boton que me permita validarlo de tal forma que se renderize un boton ya validado.
+- Realizar los puntos del ejercicio 1
+- Realizar un Hook que me permita validar ese boton
+- El Hook debe pedir por validacion de typescript que requiere la funcion de validacion.
+- El Hook debe retornar el componente ya validado.
